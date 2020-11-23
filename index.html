@@ -42,12 +42,16 @@
     <script src="https://cdn.amcharts.com/lib/4/themes/kelly.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
 
-    <script src="js/amcharts.js "></script>
+    <script src="js/amcharts.js"></script>
 
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
 
 
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="./js/form.js"></script>
 
 </head>
 
@@ -115,7 +119,7 @@
 
                         <!-- <small class="small-text">Welcome to <span class="mobile-block">my portfolio website!</span></small> -->
                         <h5></h5>
-                        <h1 class="animated animated-text ">
+                        <h1 class="animated animated-text">
                             <span><small class="small-text">Welcome to my portfolio website</small></span> <br>
                             <!-- <span class="mr-0">Harshal Narkhede</span> <br> -->
                             <span class="mr-0">I'm</span>
@@ -706,7 +710,7 @@
             <h2 class="h1 font-weight-semi-bold">Some Things I've Built</h2>
         </div>
         <!-- Features Section -->
-        <div class="container ">
+        <div class="container">
             <div class="row justify-content-lg-between align-items-lg-center">
                 <div class="col-lg-5 order-lg-2 mb-md-9 mb-lg-0">
                     <!-- Description -->
@@ -762,12 +766,12 @@
 
                 <div class="col-lg-7 order-lg-1">
                     <!-- Gallery Section -->
-                    <div class="container-fluid position-relative space-bottom-1 ">
+                    <div class="container-fluid position-relative space-bottom-1">
                         <div class="row mx-gutters-1 justify-content-center">
                             <div class="bg-white shadow-sm rounded">
                                 <!-- Gallery -->
                                 <a class="js-fancybox u-media-viewer">
-                                    <img class="img-fluid " src="./images/cloud_native_visualization_embedding.PNG " alt="Cloud Native Quicksight embedding ">
+                                    <img class="img-fluid " src="./images/cloud_native_visualization_embedding.PNG " alt="Cloud Native Quicksight embedding">
                                 </a>
                                 <!-- End Gallery -->
                             </div>
@@ -788,17 +792,17 @@
         <!-- End Divider -->
 
         <!-- Project 2 Section -->
-        <div class="container ">
+        <div class="container">
             <div class="row justify-content-lg-between align-items-lg-center">
 
                 <div class="col-lg-7 order-2">
                     <!-- Gallery Section -->
-                    <div class="container-fluid position-relative space-bottom-1 ">
+                    <div class="container-fluid position-relative space-bottom-1">
                         <div class="row mx-gutters-1 justify-content-center">
                             <div class="bg-white shadow-sm rounded">
                                 <!-- Gallery -->
                                 <a class="js-fancybox u-media-viewer">
-                                    <img class="img-fluid " src="./images/cloud_native_visualization_embedding.PNG " alt="Cloud Native Quicksight embedding ">
+                                    <img class="img-fluid " src="./images/cloud_native_visualization_embedding.PNG " alt="Cloud Native Quicksight embedding">
                                 </a>
                                 <!-- End Gallery -->
                             </div>
@@ -872,7 +876,7 @@
         <!-- End Divider -->
 
         <!-- Features Section -->
-        <div class="container ">
+        <div class="container">
             <div class="row justify-content-lg-between align-items-lg-center">
                 <div class="col-lg-5 order-lg-2 mb-md-9 mb-lg-0">
                     <!-- Description -->
@@ -928,12 +932,12 @@
 
                 <div class="col-lg-7 order-lg-1">
                     <!-- Gallery Section -->
-                    <div class="container-fluid position-relative space-bottom-1 ">
+                    <div class="container-fluid position-relative space-bottom-1">
                         <div class="row mx-gutters-1 justify-content-center">
                             <div class="bg-white shadow-sm rounded">
                                 <!-- Gallery -->
                                 <a class="js-fancybox u-media-viewer">
-                                    <img class="img-fluid " src="./images/cloud_native_visualization_embedding.PNG " alt="Cloud Native Quicksight embedding ">
+                                    <img class="img-fluid " src="./images/cloud_native_visualization_embedding.PNG " alt="Cloud Native Quicksight embedding">
                                 </a>
                                 <!-- End Gallery -->
                             </div>
@@ -985,48 +989,54 @@
 
         <!-- Contact Form-->
         <!-- Hire Us Form -->
-        <form class="js-validate w-lg-50 mx-auto">
+
+        <!-- Hire Us Form -->
+        <form id="mainForm" class="js-validate w-lg-50 mx-auto">
             <!-- Input -->
             <div class="js-form-message mb-6">
-                <label class="form-label small-text1">
+                <label for="first_name" class="form-label small-text1">
         Your name
         <span class="text-danger">*</span>
       </label>
 
-                <input type="text" class="form-control" name="firstName" placeholder="Jack Wayley" aria-label="Jack Wayley" required data-msg="Please enter your frist name." data-error-class="u-has-error" data-success-class="u-has-success">
+                <input type="text" class="form-control" name="first_name" id="first_name" placeholder="Jack Wayley" aria-label="Jack Wayley" required data-msg="Please enter your frist name." data-error-class="u-has-error" data-success-class="u-has-success">
             </div>
             <!-- End Input -->
 
             <!-- Input -->
             <div class="js-form-message mb-6">
-                <label class="form-label small-text1">
+                <label for="email" class="form-label small-text1">
         Your email address
         <span class="text-danger">*</span>
       </label>
 
-                <input type="email" class="form-control" name="emailAddress" placeholder="jackwayley@gmail.com" aria-label="jackwayley@gmail.com" required data-msg="Please enter a valid email address." data-error-class="u-has-error" data-success-class="u-has-success">
+                <input type="email" class="form-control" id="email" name="email" placeholder="jackwayley@gmail.com" aria-label="jackwayley@gmail.com" required data-msg="Please enter a valid email address." data-error-class="u-has-error" data-success-class="u-has-success">
             </div>
             <!-- End Input -->
 
 
             <!-- Input -->
             <div class="js-form-message mb-6">
-                <label class="form-label small-text1">
+                <label for="message" class="form-label small-text1">
         Tell me about your project
         <span class="text-danger">*</span>
       </label>
 
-                <textarea class="form-control" rows="4" name="answer" placeholder="Hi there, I would like to ..." aria-label="Hi there, I would like to ..." required data-msg="Please enter a reason." data-error-class="u-has-error" data-success-class="u-has-success"></textarea>
+                <textarea class="form-control" id="message" rows="4" name="message" placeholder="Hi there, I would like to ..." aria-label="Hi there, I would like to ..." required data-msg="Please enter a reason." data-error-class="u-has-error" data-success-class="u-has-success"></textarea>
             </div>
             <!-- End Input -->
 
             <div class="text-center">
                 <div class="mb-2 text-center">
-                    <button type="submit" class="btn custom-btn custom-btn-bg custom-btn-link">Let's Start Working Together</button>
+                    <button id="submit" type="submit" class="btn custom-btn custom-btn-bg custom-btn-link">Let's Start Working Together</button>
                 </div>
                 <p class="small small-text1">Will get back to you in 1-2 business days.</p>
             </div>
         </form>
+        <div class="text-center font-weight-bold text-success" id="form-response"></div>
+        <!-- End Hire Us Form -->
+
+
         <!-- End Hire Us Form -->
         <!-- END Contact Form-->
 
@@ -1034,13 +1044,13 @@
     <!-- Contact -->
 
     <!-- FOOTER -->
-    <footer class="footer ">
-        <div class="container ">
-            <div class="row ">
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
 
-                <div class="col-lg-12 col-12 ">
-                    <p class="copyright-text text-center ">Copyright &copy; 2019 Company Name . All rights reserved</p>
-                    <p class="copyright-text text-center ">Designed by <a rel="nofollow " href="https://www.facebook.com/tooplate ">Tooplate</a></p>
+                <div class="col-lg-12 col-12">
+                    <p class="copyright-text text-center">Copyright &copy; 2019 Company Name . All rights reserved</p>
+                    <p class="copyright-text text-center">Designed by <a rel="nofollow " href="https://www.facebook.com/tooplate">Tooplate</a></p>
                 </div>
 
             </div>
@@ -1050,21 +1060,21 @@
 
 
 
-    <script src="js/jquery-3.3.1.min.js "></script>
-    <script src="js/popper.min.js "></script>
-    <script src="js/bootstrap.min.js "></script>
-    <script src="js/Headroom.js "></script>
-    <script src="js/jQuery.headroom.js "></script>
-    <script src="js/owl.carousel.min.js "></script>
-    <script src="js/smoothscroll.js "></script>
-    <script src="js/custom.js "></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/Headroom.js"></script>
+    <script src="./js/jQuery.headroom.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/smoothscroll.js"></script>
+    <script src="./js/custom.js"></script>
     <!-- JS Implementing Plugins -->
-    <script src="css/jquery-mask-plugin/dist/jquery.mask.min.js "></script>
-    <script src="css/select2/dist/js/select2.full.min.js "></script>
+    <script src="css/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+    <script src="css/select2/dist/js/select2.full.min.js"></script>
 
     <!-- JS Front -->
-    <script src="js/hs.mask.js "></script>
-    <script src="js/hs.select2.js "></script>
+    <script src="js/hs.mask.js"></script>
+    <script src="js/hs.select2.js"></script>
 
 
 
