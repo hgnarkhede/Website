@@ -47,7 +47,7 @@ $(document).ready(function() {
             if (error != '') $('#form-response').text('Error: ' + error);
         }).always(function(data) {
             console.log(JSON.stringify(data));
-            $('#form-response').text('Form submitted!');
+            $('#form-response').text('Thank you for submitting!');
         });
 
     });
