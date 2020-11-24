@@ -1,243 +1,51 @@
-<!-- Styles -->
-<style>
-    #chartdiv {
-        width: 100%;
-        height: 500px;
-    }
-</style>
+<!doctype html>
+<html lang="en">
 
-<!-- Resources -->
-<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
-<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
-<script src="https://cdn.amcharts.com/lib/4/themes/kelly.js"></script>
-<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Building a Contact Form with API Gateway and SES</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./js/form.js"></script>
+</head>
 
-<!-- Chart code -->
-<script>
-    am4core.ready(function() {
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top"></nav>
 
-        // Themes begin
-        am4core.useTheme(am4themes_kelly);
-        am4core.useTheme(am4themes_animated);
-        // Themes end
+    <main role="main" class="container">
 
-        var container = am4core.create("chartdiv", am4core.Container);
-        container.width = am4core.percent(100);
-        container.height = am4core.percent(100);
-        container.layout = "horizontal";
+        <div class="starter-template">
+            <h1>Building a Contact Form with API Gateway and SES</h1>
+            <p class="lead">Fill out this form and submit to API Gateway!</p>
 
+            <form id="mainForm">
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="first_name">First name</label>
+                        <input type="text" class="form-control" id="first_name" placeholder="First name" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" id="email" type="email" placeholder="Email" required>
+                    </div>
+                </div>
 
-        var chart = container.createChild(am4charts.PieChart);
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <input type="textarea" class="form-control" id="message" placeholder="Message" rows="5" required>
+                </div>
 
-        // Add data
-        chart.data = [{
-            "country": "Lithuania",
-            "litres": 500,
-            "subData": [{
-                name: "A",
-                value: 200
-            }, {
-                name: "B",
-                value: 150
-            }, {
-                name: "C",
-                value: 100
-            }, {
-                name: "D",
-                value: 50
-            }]
-        }, {
-            "country": "Czech Republic",
-            "litres": 300,
-            "subData": [{
-                name: "A",
-                value: 150
-            }, {
-                name: "B",
-                value: 100
-            }, {
-                name: "C",
-                value: 50
-            }]
-        }, {
-            "country": "Ireland",
-            "litres": 200,
-            "subData": [{
-                name: "A",
-                value: 110
-            }, {
-                name: "B",
-                value: 60
-            }, {
-                name: "C",
-                value: 30
-            }]
-        }, {
-            "country": "Germany",
-            "litres": 150,
-            "subData": [{
-                name: "A",
-                value: 80
-            }, {
-                name: "B",
-                value: 40
-            }, {
-                name: "C",
-                value: 30
-            }]
-        }, {
-            "country": "Australia",
-            "litres": 140,
-            "subData": [{
-                name: "A",
-                value: 90
-            }, {
-                name: "B",
-                value: 40
-            }, {
-                name: "C",
-                value: 10
-            }]
-        }, {
-            "country": "Austria",
-            "litres": 120,
-            "subData": [{
-                name: "A",
-                value: 60
-            }, {
-                name: "B",
-                value: 30
-            }, {
-                name: "C",
-                value: 30
-            }]
-        }];
+                <button id="submit" class="btn btn-primary" type="submit">Submit form</button>
+            </form>
+            <div id="form-response"></div>
+        </div>
 
-        // Add and configure Series
-        var pieSeries = chart.series.push(new am4charts.PieSeries());
-        pieSeries.dataFields.value = "litres";
-        pieSeries.dataFields.category = "country";
-        pieSeries.slices.template.states.getKey("active").properties.shiftRadius = 0;
-        //pieSeries.labels.template.text = "{category}\n{value.percent.formatNumber('#.#')}%";
+    </main>
 
-        pieSeries.slices.template.events.on("hit", function(event) {
-            selectSlice(event.target.dataItem);
-        })
+</body>
 
-        var chart2 = container.createChild(am4charts.PieChart);
-        chart2.width = am4core.percent(30);
-        chart2.radius = am4core.percent(80);
-
-        // Add and configure Series
-        var pieSeries2 = chart2.series.push(new am4charts.PieSeries());
-        pieSeries2.dataFields.value = "value";
-        pieSeries2.dataFields.category = "name";
-        pieSeries2.slices.template.states.getKey("active").properties.shiftRadius = 0;
-        //pieSeries2.labels.template.radius = am4core.percent(50);
-        //pieSeries2.labels.template.inside = true;
-        //pieSeries2.labels.template.fill = am4core.color("#ffffff");
-        pieSeries2.labels.template.disabled = true;
-        pieSeries2.ticks.template.disabled = true;
-        pieSeries2.alignLabels = false;
-        pieSeries2.events.on("positionchanged", updateLines);
-
-        var interfaceColors = new am4core.InterfaceColorSet();
-
-        var line1 = container.createChild(am4core.Line);
-        line1.strokeDasharray = "2,2";
-        line1.strokeOpacity = 0.5;
-        line1.stroke = interfaceColors.getFor("alternativeBackground");
-        line1.isMeasured = false;
-
-        var line2 = container.createChild(am4core.Line);
-        line2.strokeDasharray = "2,2";
-        line2.strokeOpacity = 0.5;
-        line2.stroke = interfaceColors.getFor("alternativeBackground");
-        line2.isMeasured = false;
-
-        var selectedSlice;
-
-        function selectSlice(dataItem) {
-
-            selectedSlice = dataItem.slice;
-
-            var fill = selectedSlice.fill;
-
-            var count = dataItem.dataContext.subData.length;
-            pieSeries2.colors.list = [];
-            for (var i = 0; i < count; i++) {
-                pieSeries2.colors.list.push(fill.brighten(i * 2 / count));
-            }
-
-            chart2.data = dataItem.dataContext.subData;
-            pieSeries2.appear();
-
-            var middleAngle = selectedSlice.middleAngle;
-            var firstAngle = pieSeries.slices.getIndex(0).startAngle;
-            var animation = pieSeries.animate([{
-                property: "startAngle",
-                to: firstAngle - middleAngle
-            }, {
-                property: "endAngle",
-                to: firstAngle - middleAngle + 360
-            }], 600, am4core.ease.sinOut);
-            animation.events.on("animationprogress", updateLines);
-
-            selectedSlice.events.on("transformed", updateLines);
-
-            //  var animation = chart2.animate({property:"dx", from:-container.pixelWidth / 2, to:0}, 2000, am4core.ease.elasticOut)
-            //  animation.events.on("animationprogress", updateLines)
-        }
-
-
-        function updateLines() {
-            if (selectedSlice) {
-                var p11 = {
-                    x: selectedSlice.radius * am4core.math.cos(selectedSlice.startAngle),
-                    y: selectedSlice.radius * am4core.math.sin(selectedSlice.startAngle)
-                };
-                var p12 = {
-                    x: selectedSlice.radius * am4core.math.cos(selectedSlice.startAngle + selectedSlice.arc),
-                    y: selectedSlice.radius * am4core.math.sin(selectedSlice.startAngle + selectedSlice.arc)
-                };
-
-                p11 = am4core.utils.spritePointToSvg(p11, selectedSlice);
-                p12 = am4core.utils.spritePointToSvg(p12, selectedSlice);
-
-                var p21 = {
-                    x: 0,
-                    y: -pieSeries2.pixelRadius
-                };
-                var p22 = {
-                    x: 0,
-                    y: pieSeries2.pixelRadius
-                };
-
-                p21 = am4core.utils.spritePointToSvg(p21, pieSeries2);
-                p22 = am4core.utils.spritePointToSvg(p22, pieSeries2);
-
-                line1.x1 = p11.x;
-                line1.x2 = p21.x;
-                line1.y1 = p11.y;
-                line1.y2 = p21.y;
-
-                line2.x1 = p12.x;
-                line2.x2 = p22.x;
-                line2.y1 = p12.y;
-                line2.y2 = p22.y;
-            }
-        }
-
-        chart.events.on("datavalidated", function() {
-            setTimeout(function() {
-                selectSlice(pieSeries.dataItems.getIndex(0));
-            }, 1000);
-        });
-
-
-    }); // end am4core.ready()
-</script>
-
-<!-- HTML -->
-<div id="chartdiv"></div>
-amCharts
+</html>
