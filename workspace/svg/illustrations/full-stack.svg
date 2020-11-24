@@ -4,7 +4,7 @@
 	 viewBox="0 0 501.8 402.8" style="enable-background:new 0 0 501.8 402.8;" xml:space="preserve">
 <style type="text/css">
 	.full-stack-0{fill:#E7EAF3;}
-	.full-stack-1{fill:#377DFF;}
+	.full-stack-1{fill:#ffc107;}
 	.full-stack-2{fill:#BDC5D1;}
 	.full-stack-3{fill:#FFFFFF;}
 	.full-stack-4{fill:none;stroke:#FFFFFF;}
@@ -26,21 +26,21 @@
 	171.7,192.4 173.7,189.6 193.8,207.4 205.8,218.4 213.3,218.4 213.3,104.1 "/>
 <path class="full-stack-0 fill-gray-300" d="M352.9,177.2v72.2c9.3,3,22.3,7,34.3,8.9c1.8-0.9,3.9-1.3,5.9-1.3c5.8,0,10.6,3.5,10.6,7.8s-4.7,7.8-10.6,7.8
 	c-2.7,0.1-5.4-0.8-7.6-2.4c-4.1-0.5-19.6-2.5-32.7-4.3v128.9H466V177.2H352.9z"/>
-<path class="full-stack-1 fill-primary" d="M385.6,270.2c-3.1-0.4-13-1.6-23.3-3v3.4h23.8C385.9,270.5,385.8,270.4,385.6,270.2z"/>
-<path class="full-stack-1 fill-primary" d="M362.7,252.4c7.6,2.3,16.3,4.5,24.5,5.8c1.8-0.9,3.9-1.3,5.9-1.3c5.8,0,10.6,3.5,10.6,7.8
+<path class="full-stack-1 fill-white" d="M385.6,270.2c-3.1-0.4-13-1.6-23.3-3v3.4h23.8C385.9,270.5,385.8,270.4,385.6,270.2z"/>
+<path class="full-stack-1 fill-white" d="M362.7,252.4c7.6,2.3,16.3,4.5,24.5,5.8c1.8-0.9,3.9-1.3,5.9-1.3c5.8,0,10.6,3.5,10.6,7.8
 	c0,2.3-1.4,4.4-3.5,5.8h56.4v-18.2h-93.9V252.4z"/>
 <rect x="465.7" y="177.2" class="full-stack-2 fill-gray-400" width="26.3" height="217.7"/>
-<rect x="362.3" y="190.9" class="full-stack-1 fill-primary" width="94.3" height="18.2"/>
+<rect x="362.3" y="190.9" class="full-stack-1 fill-white" width="94.3" height="18.2"/>
 <circle class="full-stack-3 fill-white" cx="369.1" cy="197.8" r="3.2"/>
 <line class="full-stack-4 fill-none stroke-white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="424" y1="197.8" x2="374.9" y2="197.8"/>
-<rect x="362.3" y="221.7" class="full-stack-1 fill-primary" width="94.3" height="18.2"/>
+<rect x="362.3" y="221.7" class="full-stack-1 fill-white" width="94.3" height="18.2"/>
 <circle class="full-stack-3 fill-white" cx="369.1" cy="228.5" r="3.2"/>
 <line class="full-stack-4 fill-none stroke-white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="424" y1="228.5" x2="374.9" y2="228.5"/>
 <line class="full-stack-4 fill-none stroke-white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="424" y1="259.2" x2="400.6" y2="259.2"/>
-<rect x="362.3" y="283.1" class="full-stack-1 fill-primary" width="94.3" height="18.2"/>
+<rect x="362.3" y="283.1" class="full-stack-1 fill-white" width="94.3" height="18.2"/>
 <circle class="full-stack-3 fill-white" cx="369.1" cy="290" r="3.2"/>
 <line class="full-stack-4 fill-none stroke-white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="424" y1="290" x2="374.9" y2="290"/>
-<rect x="362.3" y="313.9" class="full-stack-1 fill-primary" width="94.3" height="18.2"/>
+<rect x="362.3" y="313.9" class="full-stack-1 fill-white" width="94.3" height="18.2"/>
 <circle class="full-stack-3 fill-white" cx="369.1" cy="320.7" r="3.2"/>
 <line class="full-stack-4 fill-none stroke-white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="424" y1="320.7" x2="374.9" y2="320.7"/>
 <line class="full-stack-4 fill-none stroke-white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" x1="485.9" y1="204" x2="471.7" y2="204"/>
@@ -65,7 +65,7 @@
 	c-1.5-0.3-3.8-3.5-5.8-8"/>
 <path class="full-stack-5 fill-none stroke-dark" stroke-width="1.18" stroke-linecap="round" stroke-linejoin="round" d="M182.1,204.4c-4.3,3.9-4.7,10.5-0.8,14.9c3,3.3,7.7,4.4,11.8,2.8"/>
 <rect x="68.8" y="2.9" class="full-stack-0 fill-gray-300" width="143.2" height="84.9"/>
-<rect x="9.8" y="2" class="full-stack-1 fill-primary" width="50.3" height="84.9"/>
+<rect x="9.8" y="2" class="full-stack-1 fill-white" width="50.3" height="84.9"/>
 <path class="full-stack-6 fill-none stroke-success" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="M84.1,75.5c4.2-5,11.6-13.5,25-16.4c20.1-4.3,25.9-27.8,35.5-27.8c12.1,0,17.2,6.9,22.2,6.9
 	c10,0,20.6-9.3,26.1-23"/>
 <rect x="17.2" y="15.4" class="full-stack-3 fill-white" width="35.6" height="3.3"/>
@@ -94,7 +94,7 @@
 <path class="full-stack-8 fill-none stroke-gray-300" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M349.1,81.7c3.1,5.9,4.7,12.2,4.7,17.7c0,13-2.2,21.9-3.8,29.7"/>
 <path class="full-stack-8 fill-none stroke-gray-300" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M277.9,73.2c9.6-8,20.3-13.9,33.1-13.9c10.5,0,19,3.1,25.6,7.9"/>
 <path class="full-stack-8 fill-none stroke-gray-300" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M226.4,114.7c10,0,19.2-8.5,29-18.9"/>
-<rect x="258.8" y="76.1" class="full-stack-1 fill-primary" width="14.1" height="14.1"/>
+<rect x="258.8" y="76.1" class="full-stack-1 fill-white" width="14.1" height="14.1"/>
 <circle class="full-stack-9 fill-success" cx="342.9" cy="73.4" r="6.2"/>
 <polygon class="full-stack-10 fill-warning" points="360.2,140.1 346.3,131.1 345.4,147.5 "/>
 <path class="full-stack-5 fill-none stroke-dark" stroke-width="1.18" stroke-linecap="round" stroke-linejoin="round" d="M283.9,183.4c0,0-0.4,16.8-0.3,19.2c0,1.4-5.1,2.3-9.2,1.9"/>
